@@ -2,17 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
+      "src": "api/purchase.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "server.js"
+      "src": "/(.*)",
+      "dest": "/api/purchase.js"
     }
-  ],
-  "env": {
-    "BRIDGE_SECRET": "@bridge-secret"
-  }
+  ]
 }
